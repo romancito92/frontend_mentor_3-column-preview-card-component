@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+}
+
+body h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+body p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 4.8rem;
+}
+
+img {
+    width: 60px;
+    height: 34px;
+    margin: 1rem 0 0 0;
+}
+
+a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    background-image: linear-gradient(orange, orange);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: .5s;
+}
+
+a:hover {
+    color: orange;
+    background-size: 100% 1px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+}
+
+.cards__wrapper {
+    display: flex;
+    width: 56vw;
+    height: auto;
+}
+
+.card__content {
+    margin: 2rem 2.2rem;
+}
+
+.btn {
+    background-color: hsl(0, 0%, 95%);
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    width: 8.5rem;
+    height: 2.8rem;
+    margin: 0 0 1rem 0;
+    cursor: pointer;
+    transition-property: background, color;
+    transition-duration: .5s;
+}
+
+.sedans .btn:hover,
+.suvs .btn:hover,
+.luxury .btn:hover {
+    background: transparent;
+    border: 2px solid hsl(0, 0%, 87%);
+    color: hsl(0, 0%, 95%);
+}
+
+.sedans .btn {
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs .btn {
+    color: hsl(184, 88%, 30%);
+}
+
+.luxury .btn {
+    color: hsl(179, 82%, 27%);
+}
+
+.card:first-child {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card:nth-child(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.card:last-child {
+    background-color: hsl(179, 94%, 18%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 480px) {
+    .wrapper {
+        height: auto;
+        margin: 1rem 0;
+    }
+    .cards__wrapper {
+        flex-direction: column;
+        width: 90vw;
+    }
+    .card:first-child {
+        background-color: hsl(31, 77%, 52%);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .card:last-child {
+        background-color: hsl(179, 94%, 18%);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+}
